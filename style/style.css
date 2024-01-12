@@ -1,0 +1,51 @@
+:root {
+    --cell-size: 50px;
+    --cell-biggersize: 75px;
+}
+
+/* GENERAL */
+
+body {
+    background-color: beige;
+}
+
+header {
+    height: 150px;
+    text-align: center;
+}
+
+main {
+    height: 750px;
+}
+
+
+/* UTILITIES */
+
+.num-cell {
+    width: var(--cell-size);
+    height: var(--cell-size);    
+
+    background-color: white;
+    border: 1px solid black;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/*! MAIN */
+
+#timer {
+    margin-left: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 50%;
+    
+    width: var(--cell-biggersize);
+    height:  var(--cell-biggersize);
+
+}

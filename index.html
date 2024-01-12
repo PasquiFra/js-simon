@@ -24,19 +24,49 @@
 
         <!-- Collegamento file Javascript -->
         <script src="./js/script.js" defer></script>
+        <script src="./js/functions.js"></script>
     </head>
 
 <body>
+    <div class="container-flex">  
+        <header>
+            <h1>Simon Says</h1>
+        </header>
+
+        <main>
+
+            <section class="flex-center my-5">
+                <h3 class="w-100 mb-5">Genera i numeri per far partire il timer</h3>
+                <div class="w-100 flex-center">
+                    <button id="create-nums" class="btn btn-success">Genera!</button>
+                    <div id="timer" class="flex-center">
     
-    <header>
-        <h1>Simon Says</h1>
-    </header>
+                    </div>
+                </div>
+            </section>
 
-    <main>
+            <section id="generated-nums" class="flex-center">
+                <h3 class="w-100">Ho generato questi numeri, hai 30 secondi per memorizzarli!</h3>
+                <div id="magic-numbers">
+                    
+                </div>
+            </section>
+            
+            <section id="my-input" class="flex-center">
+                <h3 class="w-100">Inserisci i numeri che hai memorizzato... <br> Vediamo se hai una buona memoria!</h3>
+                <div id="my-numbers">
+                    <input id="my-number-1" type="text" class="num-cell m-3">
+                    <input id="my-number-2" type="text" class="num-cell m-3">
+                    <input id="my-number-3" type="text" class="num-cell m-3">
+                    <input id="my-number-4" type="text" class="num-cell m-3">
+                    <input id="my-number-5" type="text" class="num-cell m-3">
+                </div>
+            </section>
 
 
-        
-    </main>
+
+        </main>
+    </div>  
 
 </body>
 
