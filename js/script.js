@@ -16,30 +16,38 @@ let totCells = 5;
 const minNum = 1;
 const maxNum = 99;
 const blacklistNums = [];
-let randomNumber ;
-
+let randomNumber;
+let cell;
+let timerCount = 30;
+let leftTime;
 
 //! START GAME function
 
 const startGame = () => {
     console.log("partito!");
     
+    generatedNums.innerHTML = "";
+
     // creo le celle ed inserisco il numero causale 
     for (let i = 0; i < totCells; i++) {
         
-        getUniqueRandomNumber(minNum, maxNum, blacklistNums)
+        randomNumber = getUniqueRandomNumber(minNum, maxNum, blacklistNums, totCells);
 
-        generateCell(randomNumber)
-
-
-
-        blacklistNums.push(randomNumber)
+        blacklistNums.push(randomNumber);
         
+        cell = generateCell(blacklistNums[i]);
+        generatedNums.appendChild(cell);
+
+        console.log(cell);
         console.log(blacklistNums);
         console.log(randomNumber);
-        console.log(i)
-
+        console.log(i);
     }
+
+    leftTime = setInterval(() => {
+        timerCount = timerFunction(timerCount);
+        timer.textContent = timerCount;
+      }, 1000)
 }
 
 

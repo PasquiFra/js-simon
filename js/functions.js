@@ -9,7 +9,7 @@
  */
 
 const getUniqueRandomNumber = (min, max, blacklist) => {
-
+    let randomNumber;
     //continua a pescare numeri fintanto che quello che hai pescato è già nella blacklist
     do {
         randomNumber = Math.floor(Math.random() * (max + 1 - min) + min);
@@ -28,4 +28,18 @@ const generateCell = (content) => {
     cell.className = "num-cell m-3 flex-center";
     cell.innerText = content;
     return cell;
+}
+
+const timerFunction = (count) => {
+   
+    let remainingTime = count;
+
+    if (count === 0){
+        clearInterval(count)
+        
+    } else {
+        remainingTime--;
+    }
+    console.log(remainingTime)
+    return remainingTime
 }
