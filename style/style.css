@@ -1,5 +1,5 @@
 :root {
-    --cell-size: 50px;
+    --cell-size: 60px;
     --cell-biggersize: 75px;
 }
 
@@ -48,4 +48,12 @@ main {
     width: var(--cell-biggersize);
     height:  var(--cell-biggersize);
 
+}
+
+.blur {
+    filter: blur(4px);
+}
+
+input {
+    
 }

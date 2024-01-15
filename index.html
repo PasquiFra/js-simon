@@ -40,30 +40,29 @@
                 <div class="w-100 flex-center">
                     <button id="create-nums" class="btn btn-success">Genera!</button>
                     <div id="timer" class="flex-center">
-                        30
+                
                     </div>
                 </div>
             </section>
 
             <section id="generated-nums" class="flex-center">
-                <h3 class="w-100">Ho generato questi numeri, hai 30 secondi per memorizzarli!</h3>
+                <h3 id="message" class="w-100"></h3>
                 <div id="magic-numbers" class="flex-center">
                     
                 </div>
             </section>
             
-            <section id="my-input" class="flex-center">
-                <h3 class="w-100">Inserisci i numeri che hai memorizzato... <br> Vediamo se hai una buona memoria!</h3>
-                <div id="my-numbers">
-                    <input id="my-number-1" type="text" class="num-cell m-3">
-                    <input id="my-number-2" type="text" class="num-cell m-3">
-                    <input id="my-number-3" type="text" class="num-cell m-3">
-                    <input id="my-number-4" type="text" class="num-cell m-3">
-                    <input id="my-number-5" type="text" class="num-cell m-3">
+            <section>
+                <form>
+                    <div class="d-none flex-center" id="my-numbers">
+
+                    </div>
+                </form>
+                <div class="flex-center">
+                    <button id="submit-button" type="button" class="btn btn-success d-none">Verifica</button>
+                    <div id="validation-message" class="w-100"></div>
                 </div>
             </section>
-
-
 
         </main>
     </div>  

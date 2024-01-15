@@ -1,45 +1,45 @@
-//! dichiaro le funzioni
 
-/**                 
- * Restituisce un numero, compreso tra un minimo e un massimo, ma non facente parte di una lista di numeri vietati
- * @param {number} min il numero minimo
- * @param {number} max il numero massimo
- * @param {array} blacklist i numeri che non possono essere restituiti
- * @returns {number} un solo numero compreso tra min e max ma non presente nella lista dei vietati
- */
-
-const getUniqueRandomNumber = (min, max, blacklist) => {
+const getUniqueRandomNumber = (min, max, listOfGenNumbers) => {
     let randomNumber;
     //continua a pescare numeri fintanto che quello che hai pescato è già nella blacklist
     do {
         randomNumber = Math.floor(Math.random() * (max + 1 - min) + min);
-    } while (blacklist.includes(randomNumber));
+    } while (listOfGenNumbers.includes(randomNumber));
     return randomNumber
 }
 
-/**                 
- * Genera una cella
- * @param {number} string il contenuto che voglio inserire nella cella 
- * @returns {*} una cella con eventualmente del contenuto al suo interno
- */
-
 const generateCell = (content) => {
     const cell = document.createElement("div");
-    cell.className = "num-cell m-3 flex-center";
+    cell.className = "magic-numbers num-cell m-3 flex-center";
     cell.innerText = content;
+    return cell;
+}
+const generateMyCell = () => {
+    const code = 
+    `
+    <input type="number" class="my-inputs form-control num-cell m-3 flex-center" min="1" max="99" required>
+    `;
+    cell = code;
     return cell;
 }
 
 const timerFunction = (count) => {
    
     let remainingTime = count;
+    const addBlur = document.querySelectorAll(".magic-numbers");
 
     if (count === 0){
-        clearInterval(count)
-        
+        clearInterval(count);
+        for (let i = 0 ; i < totCells ; i++){
+            addBlur[i].classList.add("blur");
+        }
+        message.innerHTML = "Inserisci i numeri che hai memorizzato... <br> Vediamo se hai una buona memoria!"
+        myNums.classList.remove("d-none");
+        submitButton.classList.remove("d-none");
+
     } else {
-        remainingTime--;
+        --remainingTime;
+        console.log(remainingTime)
     }
-    console.log(remainingTime)
     return remainingTime
 }
