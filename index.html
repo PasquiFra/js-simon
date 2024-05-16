@@ -2,33 +2,33 @@
 
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-        <meta name="author" content="Francesco Pasquinoni">
-        <meta name="description" content="esercitazione 12/01">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <meta name="author" content="Francesco Pasquinoni">
+    <meta name="description" content="esercitazione 12/01">
 
-        <title>Simon Says</title>
+    <title>Simon Says</title>
 
-        <!-- Collegamento font-awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <!-- Collegamento font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Collegamento Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Collegamento Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-        <!-- Collegamento foglio di stile -->
-        <link rel="stylesheet" href="./style/style.css">
+    <!-- Collegamento foglio di stile -->
+    <link rel="stylesheet" href="./style/style.css">
 
-        <!-- Collegamento file Javascript -->
-        <script src="./js/functions.js"></script>
-        <script src="./js/script.js" defer></script>
-    </head>
+    <!-- Collegamento file Javascript -->
+    <script src="./js/functions.js"></script>
+    <script src="./js/script.js" defer></script>
+</head>
 
 <body>
-    <div class="container-flex">  
+    <div class="container-flex">
         <header>
             <h1>Simon Says</h1>
         </header>
@@ -40,7 +40,7 @@
                 <div class="w-100 flex-center">
                     <button id="create-nums" class="btn btn-success">Genera!</button>
                     <div id="timer" class="flex-center">
-                
+
                     </div>
                 </div>
             </section>
@@ -48,10 +48,10 @@
             <section id="generated-nums" class="flex-center">
                 <h3 id="message" class="w-100"></h3>
                 <div id="magic-numbers" class="flex-center">
-                    
+
                 </div>
             </section>
-            
+
             <section>
                 <form>
                     <div class="d-none flex-center" id="my-numbers">
@@ -59,13 +59,15 @@
                     </div>
                 </form>
                 <div class="flex-center">
-                    <button id="submit-button" type="button" class="btn btn-success d-none">Verifica</button>
-                    <div id="validation-message" class="w-100"></div>
+                    <div class="w-100 m-3">
+                        <button id="submit-button" type="button" class="btn btn-success d-none">Verifica</button>
+                    </div>
+                    <div id="validation-message" class="w-100 m-3"></div>
                 </div>
             </section>
 
         </main>
-    </div>  
+    </div>
 
 </body>
 
